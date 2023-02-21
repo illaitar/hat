@@ -1,5 +1,17 @@
 import * as THREE from 'three'
 
+
+var fs = require("fs");
+var myJson = {
+  "mem": 8
+};
+
+fs.writeFile("filename.json", JSON.stringify(myJson), "utf8", yourCallback);
+
+// And then, to read it...
+myJson = require("./filename.json");
+
+
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
 
