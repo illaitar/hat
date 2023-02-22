@@ -10,17 +10,11 @@ with "Hello {name}!"
 
 <head>
     <title>Simple Flask App</title>
-    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.png')}}" type="image/x-icon">
 </head>
 
 <body>
     <form method="POST">
         Code? <input type="text" name="name-input"><br>
-        <button type="submit">Submit</button>
-    </form>
-
-    <form method="POST">
-        Read? <input type="text" name="name-read"><br>
         <button type="submit">Submit</button>
     </form>
     <p>{{message}}</p>
