@@ -1,11 +1,14 @@
 import flask
 import json 
+from app import views
 
 # A simple Flask App which takes
 # a user's name as input and responds
 # with "Hello {name}!"
 
 app = flask.Flask(__name__)
+
+app.config['SERVER_NAME'] = 'bruh'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
