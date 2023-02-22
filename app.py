@@ -11,6 +11,9 @@ def index():
     message = ''
     if flask.request.method == 'POST':
         message = 'Hello ' + flask.request.form['name-input'] + '!'
+        import json
+        with open('data.json', 'w') as f:
+            json.dump({}, f)
     return flask.render_template('index.html', message=message)
 
 if __name__ == '__main__':
